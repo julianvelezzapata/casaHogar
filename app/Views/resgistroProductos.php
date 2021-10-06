@@ -17,42 +17,66 @@
 
 </head>
 <body>
+<header>
+		<nav class="navbar navbar-expand-lg navbar-dark fondoPrincipal">
+			<div class="container-fluid">
+				<a class="navbar-brand fuente" href="#">
+					<i class="fas fa-paw"></i>
+					Animalandia
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse bg-primary" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="<?= site_url('/productos/registro') ?>">Registro Productos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Registro Animales</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
     <div class="container">
-
         <div class="mb-3">
          <h1>Diligencia el dato del animal</h1>
         </div>
-        <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Poductos</label>
-            <input class="form-control" type="text" placeholder="productos" aria-label="default input example">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">fotografia</label>
-            <input type="text" class="form-control" placeholder="escriba el link de la fotografia" >
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">precio</label>
-            <input class="form-control" type="text" placeholder="Default input" aria-label="default input example">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">descripcion</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="exampleDataList" class="form-label">Datalist example</label>    
-            <select class="form-select" aria-label="Default select example">
-                    <option selected>escoge el animal</option>
-                    <option value="1">perro</option>
-                    <option value="2">caballo</option>
-                    <option value="3">rata</option>
-                    <option value="4">lagartija</option>
-                    <option value="5">gato</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <form method="POST" action="<?= site_url('/productos/registro/nuevo') ?>" class="mt-4">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Poductos</label>
+                <input class="form-control" type="text" placeholder="productos" aria-label="default input example " name="producto">
+            
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">fotografia</label>
+                <input type="text" class="form-control" placeholder="escriba el link de la fotografia"name="foto">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">precio</label>
+                <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="precio">
+                
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">descripcion</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="exampleDataList" class="form-label">Datalist example</label>    
+                <select class="form-select" aria-label="Default select example" name="tipo">
+                        <option selected>escoge el animal</option>
+                        <option value="1">perro</option>
+                        <option value="2">caballo</option>
+                        <option value="3">rata</option>
+                        <option value="4">lagartija</option>
+                        <option value="5">gato</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
