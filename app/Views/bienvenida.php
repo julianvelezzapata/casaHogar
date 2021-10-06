@@ -16,7 +16,7 @@
 
 
 </head>
-<body class="fondo">
+<body >
 	
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark fondoPrincipal">
@@ -28,13 +28,13 @@
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse bg-primary" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
 							<a class="nav-link active" aria-current="page" href="">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="">Registro Productos</a>
+							<a class="nav-link" href="<?= site_url('/productos/registro') ?>">Registro Productos</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Registro Animales</a>
@@ -124,7 +124,7 @@
 		<div class="container mb-5">
 			<div class="row mt-5">
 				<div class="col-12 col-md-6">
-					<img src="<?=base_url('public/img/adopcion.jpg')?>" alt="adopta" class="img-fluid w-100 rounded">
+					<img src="<?=base_url('public/img/adopcion.png')?>" alt="adopta" class="img-fluid w-100 rounded">
 				</div>
 				<div class="col-12 col-md-6 align-self-center">
 
