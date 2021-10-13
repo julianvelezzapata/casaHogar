@@ -37,6 +37,17 @@ class Validation
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
 
+    // creo un arreglo de datos para vlidar llamo los nombres en el orden del formularip
+    public $producto=[
+    // nombre obj---- palabra reservada codignater que pide sea requerido
+        'producto'=>'required',
+        'foto'=>'required',
+        'precio'=>'required',
+        'descripcion'=>'required',
+        'tipo'=>'required'
+
+    ];
+
     //--------------------------------------------------------------------
     // Rules
     //--------------------------------------------------------------------

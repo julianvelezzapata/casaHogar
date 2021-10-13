@@ -16,7 +16,13 @@ class Productos extends BaseController
         $precio= $this->request->getPost("precio"); // traigo el valor que llame name="precio" del formulario
         $descripcion= $this->request->getPost("descripcion"); // traigo el valor que llame name="descripcion" del formulario
         $tipo= $this->request->getPost("tipo"); // traigo el valor que llame name="tipo" del formulario
-      //PASO2: crear un arreglo asociativo con los datos anteriores
+      // PASO 2: VALIDO QUE LLEGO
+      if($this->validate('producto')){  // this operador fecha para acceder al metodo cuando lo uso pongo el nombre de la variable o clase producto
+          echo("todo bien ");
+      }else {
+        echo("tienes datos pendientes");
+      }
+      //PASO3: crear un arreglo asociativo con los datos anteriores
         $datos=array(
             "producto" =>$producto,
             "foto" => $foto,
@@ -25,7 +31,7 @@ class Productos extends BaseController
             "tipo" => $tipo
         );
 
-     //   print_r($datos);
+        print_r($datos);
     }
 }
 
