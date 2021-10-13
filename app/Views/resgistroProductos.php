@@ -80,7 +80,25 @@
         </form>
     </div>
 
-<script src="https://kit.fontawesome.com/7b642ec699.js" crossorigin="anonymous"></script>
+	    
+	<section>
+	<?php if(session('mensaje')):?> 
+		<div class="modal fade" id="modalrespuesta" tabindex="-1" >
+			<div class="modal-dialog">
+					<div class="modal-content">
+					<div class="modal-header fondoPrincipal">
+						<h5 class="modal-title" >Casa Hogar</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<h5><?=  session('mensaje')?></h5>
+			</div>
+		</div>
+    <?php endif ?>
+
+	</section>
+    <script type="module" src="<?=base_url('public/js/lanzarmodal.js') ?>"></script>
+    <script src="https://kit.fontawesome.com/7b642ec699.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>

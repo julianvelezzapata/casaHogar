@@ -18,9 +18,11 @@ class Productos extends BaseController
         $tipo= $this->request->getPost("tipo"); // traigo el valor que llame name="tipo" del formulario
       // PASO 2: VALIDO QUE LLEGO
       if($this->validate('producto')){  // this operador fecha para acceder al metodo cuando lo uso pongo el nombre de la variable o clase producto
-          echo("todo bien ");
+        echo("bien");
       }else {
-        echo("tienes datos pendientes");
+        
+        $mensaje="tienes datos pendientes";
+          return redirect()->to(site_url('/productos/registro'))->with('mensaje',$mensaje);
       }
       //PASO3: crear un arreglo asociativo con los datos anteriores
         $datos=array(
