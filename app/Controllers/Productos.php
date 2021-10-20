@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers;
+// se trae, importa el modelo de datos
+use App\Models\ProductoModelo;
 
 class Productos extends BaseController
 {
@@ -16,13 +18,14 @@ class Productos extends BaseController
         $precio= $this->request->getPost("precio"); // traigo el valor que llame name="precio" del formulario
         $descripcion= $this->request->getPost("descripcion"); // traigo el valor que llame name="descripcion" del formulario
         $tipo= $this->request->getPost("tipo"); // traigo el valor que llame name="tipo" del formulario
+        
       // PASO 2: VALIDO QUE LLEGO
-      if($this->validate('producto')){  // this operador fecha para acceder al metodo cuando lo uso pongo el nombre de la variable o clase producto
+      if($this->validate('producto')){  // this operador flecha para acceder al metodo cuando lo uso pongo el nombre de la variable o clase producto
         echo("bien");
       }else {
         
         $mensaje="tienes datos pendientes";
-          return redirect()->to(site_url('/productos/registro'))->with('mensaje',$mensaje);
+          return redirect()->to(site_url('/productos/registro'))->with('mensaje',$mensaje); // redirecciona para poder mostrar el modal
       }
       //PASO3: crear un arreglo asociativo con los datos anteriores
         $datos=array(
@@ -33,7 +36,15 @@ class Productos extends BaseController
             "tipo" => $tipo
         );
 
-        print_r($datos);
+        //PASO4: intentamos grabar los datos en la BD
+        try {                       // intente hacer esto  
+          $modelo = new ProductoModelo();
+          $modelo-> insert($datos);     // insert() palabra reservada codeignater para insertar el arreglo que contiene la informacion
+          return redirect()->to(site_url('/productos/registro'))->with('mensaje',"exito agregando producto");
+          
+        } catch (\Exception $error) { // capture por que no pudo hacerse (error)
+          return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error -> getMessage());    
+        }
     }
 }
 
