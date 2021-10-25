@@ -33,10 +33,10 @@
 							<a class="nav-link " aria-current="page" href="<?= site_url('/Home') ?>">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="<?= site_url('/productos/registro') ?>">Registro Productos</a>
+							<a class="nav-link " href="<?= site_url('/productos/registro') ?>">Registro Productos</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?= site_url('/productos/ingreso') ?>">Registro Animales</a>
+							<a class="nav-link active" href="<?= site_url('/productos/ingreso') ?>">Registro Animales</a>
 						</li>
 					</ul>
 				</div>
@@ -48,26 +48,26 @@
 			<div class="mb-3">
 			<h1>Diligencia el dato del animal</h1>
 			</div>
-			<form method="POST" action="<?= site_url('/productos/registro/nuevo') ?>" class="mt-4 ">
+			<form method="POST" action="<?= site_url('/productos/registro/animal') ?>" class="mt-4 ">
 				<div class="mb-3">
-					<label for="exampleInputEmail1" class="form-label">Poductos</label>
-					<input class="form-control" type="text" placeholder="productos" aria-label="default input example " name="producto">
+					<label for="exampleInputEmail1" class="form-label">Nombre de la mascota</label>
+					<input class="form-control" type="text" placeholder="productos" aria-label="default input example " name="nombre">
 				
 				</div>
 				<div class="mb-3">
-					<label for="exampleInputPassword1" class="form-label">fotografia</label>
+					<label for="exampleInputPassword1" class="form-label">Foto</label>
 					<input type="text" class="form-control" placeholder="escriba el link de la fotografia"name="foto">
 				</div>
 				<div class="mb-3">
-					<label for="exampleInputEmail1" class="form-label">precio</label>
-					<input class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="precio">
+					<label for="exampleInputEmail1" class="form-label">Edad</label>
+					<input class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="edad">
 					
 				<div class="mb-3">
-					<label for="exampleFormControlTextarea1" class="form-label">descripcion</label>
+					<label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
 					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion"></textarea>
 				</div>
 				<div class="mb-3">
-					<label for="exampleDataList" class="form-label">Datalist example</label>    
+					<label for="exampleDataList" class="form-label">Tipo de animal</label>    
 					<select class="form-select" aria-label="Default select example" name="tipo">
 							<option selected>escoge el animal</option>
 							<option value="1">perro</option>

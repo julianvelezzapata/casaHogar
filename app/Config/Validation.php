@@ -47,6 +47,14 @@ class Validation
         'tipo'=>'required'
 
     ];
+// arreglo para validar los nombres del formulario de los animales
+    public $animal=[
+            'nombre'=>'required',
+            'foto'=>'required',
+            'precio'=>'required',
+            'descripcion'=>'required',
+            'tipo'=>'required'
+        ];
 
     //--------------------------------------------------------------------
     // Rules
