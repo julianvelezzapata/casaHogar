@@ -22,7 +22,7 @@ class Animales extends BaseController
           echo("todo bien");
       }else {
           echo("tienes datos pendientes");
-          return redirect()->to(site_url('/productos/registro'))->width('mensaje', $mensaje);
+          return redirect()->to(site_url('/productos/ingreso'))->width('mensaje', $mensaje);
       }
       $datos = array (
           "nombre" => $nombre,

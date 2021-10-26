@@ -35,7 +35,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/productos/registro', 'Productos::index'); 
 $routes -> get('/productos/ingreso', 'Animales::index');
 $routes -> post('/productos/registro/nuevo', 'Productos::registrar'); // ruta que me llevara la funcion registrar
-$routes -> post('/productos/registro/animales', 'Animales::ingresar');
+$routes -> post('/productos/ingreso/animales', 'Animales::ingreso');// ruta que me llevara a la funcion ingresar
 
 
 /*

@@ -48,7 +48,7 @@
 			<div class="mb-3">
 			<h1>Diligencia el dato del animal</h1>
 			</div>
-			<form method="POST" action="<?= site_url('/productos/registro/animal') ?>" class="mt-4 ">
+			<form method="POST" action="<?= site_url('/productos/ingreso/animales') ?>" class="mt-4 ">
 				<div class="mb-3">
 					<label for="exampleInputEmail1" class="form-label">Nombre de la mascota</label>
 					<input class="form-control" type="text" placeholder="productos" aria-label="default input example " name="nombre">
