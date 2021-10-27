@@ -46,6 +46,36 @@ class Productos extends BaseController
           return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error -> getMessage());    
         }
     }
+
+    public function buscar(){
+
+      try{
+        
+        $modelo= new ProductoModelo();// lo primero que tengo que hacer para buscar datos es buscar el modelo        
+        $resultado=$modelo->findAll();// despues decirle que si me puede ayudar a buscar todos los datos        
+        $productos=array('productos'=>$resultado); // adecuar la respuesta para poderla enviar, creo variable productos
+         return view('listaProductos',$productos); // retornar la vista en el arreglo productos
+
+      }catch(\Exception $error) { // capture por que no pudo hacerse (error)
+        return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error -> getMessage());
+      }
+      return view ('listaProductos');
+    }
+
+   public function eliminar($id){
+     try{
+        $modelo=new ProductoModelo();
+        
+        $modelo->where('id',$id)->delete();
+        return redirect()->to(site_url('/productos/registro'))->with('mensaje',"exito eliminando el producto");
+
+       }catch(\Exception $error){
+            return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error->getMessage());
+
+     }
+
+
+   }
 }
 
 

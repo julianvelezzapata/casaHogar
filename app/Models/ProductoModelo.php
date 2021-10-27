@@ -10,5 +10,5 @@ class ProductoModelo extends Model
     protected $primaryKey = 'id';
 
     // campos permitidos: traigo los eelemntos de la tabla descrita anteriormente
-    protected $allowedFields = ['producto', 'precio' , 'descripcion' , 'tipo'];
+    protected $allowedFields = ['producto','foto', 'precio' , 'descripcion' , 'tipo'];
 }

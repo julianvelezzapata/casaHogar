@@ -46,7 +46,7 @@
     <main>
 		<div class="container mb-5">
 			<div class="mb-3">
-			<h1>Diligencia el dato del animal</h1>
+			<h1>Diligencia el dato del producto</h1>
 			</div>
 			<form method="POST" action="<?= site_url('/productos/registro/nuevo') ?>" class="mt-4 ">
 				<div class="mb-3">
@@ -79,6 +79,9 @@
 				</div>
 				        <div class="d-grid gap-2">
                             <button class="btn btn-primary" type="submit">Button</button>
+                        </div>
+						<div class="d-grid gap-2">
+                             <a class="btn btn-primary mt-2" href="<?= site_url('productos/listado')?>"> ver inventario</a>
                         </div>
 			</form>
 		</div>

@@ -34,8 +34,11 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/productos/registro', 'Productos::index'); 
 $routes -> get('/productos/ingreso', 'Animales::index');
+$routes -> get('/productos/listado', 'Productos::buscar');
 $routes -> post('/productos/registro/nuevo', 'Productos::registrar'); // ruta que me llevara la funcion registrar
 $routes -> post('/productos/ingreso/animales', 'Animales::ingreso');// ruta que me llevara a la funcion ingresar
+$routes -> delete('/productos/eliminar/(:num)', 'Productos::eliminar/$1');// lo que le digo a codeignater es que va a llevar cualquier numero, el 1 es porque estoy diciendo que eliminar lleva un dato
+
 
 
 /*

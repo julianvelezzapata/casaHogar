@@ -21,8 +21,8 @@ class Animales extends BaseController
       if ($this->validate('animal')) {
           echo("todo bien");
       }else {
-          echo("tienes datos pendientes");
-          return redirect()->to(site_url('/productos/ingreso'))->width('mensaje', $mensaje);
+        $mensaje="tienes datos pendientes";
+          return redirect()->to(site_url('/productos/ingreso'))->with('mensaje', $mensaje);
       }
       $datos = array (
           "nombre" => $nombre,
