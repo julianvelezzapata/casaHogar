@@ -51,7 +51,7 @@ class Validation
     public $animal=[
             'nombre'=>'required',
             'foto'=>'required',
-            'precio'=>'required',
+            'edad'=>'required',
             'descripcion'=>'required',
             'tipo'=>'required'
         ];

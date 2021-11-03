@@ -78,7 +78,7 @@
 					</select>
 				</div>
 				        <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="submit">Button</button>
+                            <button class="btn btn-primary" type="submit">Enviar</button>
                         </div>
 						<div class="d-grid gap-2">
                              <a class="btn btn-primary mt-2" href="<?= site_url('productos/listado')?>"> ver inventario</a>

@@ -51,7 +51,7 @@
 			<form method="POST" action="<?= site_url('/productos/ingreso/animales') ?>" class="mt-4 ">
 				<div class="mb-3">
 					<label for="exampleInputEmail1" class="form-label">Nombre de la mascota</label>
-					<input class="form-control" type="text" placeholder="productos" aria-label="default input example " name="nombre">
+					<input class="form-control" type="text" placeholder="nombre" aria-label="default input example " name="nombre">
 				
 				</div>
 				<div class="mb-3">
@@ -60,7 +60,7 @@
 				</div>
 				<div class="mb-3">
 					<label for="exampleInputEmail1" class="form-label">Edad</label>
-					<input class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="edad">
+					<input class="form-control" type="text" placeholder="edad" aria-label="default input example" name="edad">
 					
 				<div class="mb-3">
 					<label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
@@ -78,7 +78,10 @@
 					</select>
 				</div>
 				        <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="submit">Button</button>
+                            <button class="btn btn-primary" type="submit">Enviar</button>
+                        </div>
+						<div class="d-grid gap-2">
+                             <a class="btn btn-primary mt-2" href="<?= site_url('/productos/listado/animales')?>"> ver lista de animales</a>
                         </div>
 			</form>
 		</div>

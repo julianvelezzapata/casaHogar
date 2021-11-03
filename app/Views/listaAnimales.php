@@ -41,24 +41,26 @@
 			</div>
 		</nav>
 	</header>
-    <main>
+
+	<main>
         <div class="container mt-5">
             <div class="row row-cols-1 row-cols-md-5 g-4">
                 <?php
 
-                                                        use App\Controllers\Productos;
+                                                        use App\Controllers\Animales;
 
-                foreach($productos as $producto): ?>
+                foreach($animales as $animal): ?>
                     <div class="card h-100 p-3 border" >
-                        <img src="<?= $producto["foto"] ?>" class="card-img-top rounded-circle" alt="...">
+                        <img src="<?= $animal["foto"] ?>" class="card-img-top rounded-circle" alt="foto animal">
                         <div class="card-body ">
-                            <h5 class="card-title"><?= $producto["producto"] ?></h5>
-                            <p class="card-text"><?= $producto["precio"] ?></p>
-                            <a href="#" class="btn btn-primary"type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmacion<?=$producto["id"]?>"><i class="fas fa-trash-alt"></i></a>                           
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar<?=$producto["id"]?>"><i class="far fa-edit" ></i></a>
+                            <h5 class="card-title"><?= $animal["nombre"] ?></h5>
+                            <p class="card-text">edad: <?= $animal["edad"] ?></p>
+                            <a href="#" class="btn btn-primary"type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmacion<?=$animal["id"]?>"><i class="fas fa-trash-alt"></i></a>                           
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar<?=$animal["id"]?>"><i class="far fa-edit" ></i></a>
                         </div>
+                        
                         <section>
-                            <div class="modal fade" id="confirmacion<?= $producto["id"]?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal fade" id="confirmacion<?= $animal["id"]?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -67,7 +69,7 @@
                                         </div>
                                     <div class="modal-body">
                                         estás seguro que deseas eliminar los datos?
-                                        <p> <?= $producto["id"] ?> </p>
+                                        <p> <?= $animal["id"] ?> </p>
                                     </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -115,10 +117,6 @@
             </div>
         </div>
     </main>
-
-
-
-
 
 
     <script src="https://kit.fontawesome.com/7b642ec699.js" crossorigin="anonymous"></script>

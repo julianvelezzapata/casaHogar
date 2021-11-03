@@ -76,6 +76,30 @@ class Productos extends BaseController
 
 
    }
+
+  public function editar($id){
+
+    $producto= $this->request->getPost("producto"); // traigo el valor que llame name="producto" del formulario
+    $precio= $this->request->getPost("precio"); // traigo el valor que llame name="precio" del formulario
+
+    // validacion de datos
+
+    //organizo los datos en un array asociativo
+    $datos = array(
+      'producto'=>$producto,
+      'precio'=> $precio
+    );
+    // crear un objeto del modelo
+    try {                       // intente hacer esto  
+      $modelo = new ProductoModelo();
+      $modelo-> update($id, $datos);     // update() palabra reservada codeignater para actualice el arreglo que contiene la informacion
+      return redirect()->to(site_url('/productos/registro'))->with('mensaje',"exito editando producto");
+      
+    } catch (\Exception $error) { // capture por que no pudo hacerse (error)
+      return redirect()->to(site_url('/productos/registro'))->with('mensaje',$error -> getMessage());    
+    }
+
+  }
 }
 
 
